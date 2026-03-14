@@ -25,4 +25,4 @@ for word in words:
 
 most_word = max(word_counts, key=word_counts.get)
 print(f"The most frequent word in the text: {most_word}")
-print(f"The number of occurrences:
+print(f"The number of occurrences: {word_counts[most_word]}")
