@@ -1,0 +1,28 @@
+text = input("Enter your text: ")
+
+text_symbols_count = len(text)
+print(f"Number of characters in the text: {text_symbols_count}")
+
+text_words_count = len(text.split())
+print(f"Number of words in the text: {text_words_count}")
+
+text_symbols_not_space_count = len(text.replace(' ', ''))
+print(f"Number of characters without spaces in the text: {text_symbols_not_space_count}")
+
+text_sentences_count = 0
+for char in text:
+    if char in ['!', '?', '.']:
+        text_sentences_count += 1
+print(f"Number of sentences in the text: {text_sentences_count}")
+
+words = text.lower().split()
+word_counts = {}
+for word in words:
+    if word in word_counts:
+        word_counts[word] += 1
+    else:
+        word_counts[word] = 1
+
+most_word = max(word_counts, key=word_counts.get)
+print(f"The most frequent word in the text: {most_word}")
+print(f"The number of occurrences:
